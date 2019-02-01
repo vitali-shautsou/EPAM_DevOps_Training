@@ -11,7 +11,9 @@ Vagrant.configure("2") do |config|
     server1.vm.hostname = "server1"
     server1.vm.network "private_network", ip: "192.168.0.10"
     server1.vm.provision "shell", inline: <<-SHELL
-      echo '192.168.0.11 server2.local' >> /etc/hosts
+    if grep -q '192.168.0.11 server2' /etc/hosts; then :;
+      else echo '192.168.0.11 server2' >> /etc/hosts;
+    fi
     SHELL
   end
   
@@ -19,17 +21,15 @@ Vagrant.configure("2") do |config|
     server2.vm.hostname = "server2"
     server2.vm.network "private_network", ip: "192.168.0.11"
     server2.vm.provision "shell", inline: <<-SHELL
-      if [[ ! -f "/usr/bin/git" ]]; then 
-        apt-get install git -y 
-      fi
+      apt-get install git -y 
       if [[ ! -d "/home/vagrant/EPAM_DevOps_Training/" ]]; then 
         git clone git://github.com/vitali-shautsou/EPAM_DevOps_Training
       fi
       cd EPAM_DevOps_Training/
       git checkout origin/task2
       cat test.txt
-      if grep -q '192.168.0.10 server1.local' /etc/hosts; then :;
-        else echo '192.168.0.10 server1.local' >> /etc/hosts;
+      if grep -q '192.168.0.10 server1' /etc/hosts; then :;
+        else echo '192.168.0.10 server1' >> /etc/hosts;
       fi
     SHELL
   end
