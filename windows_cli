@@ -1,0 +1,2 @@
+C:\WINDOWS\system32>:: 172.16.0.1 - IP address CentOS7 with NFS-server
+C:\WINDOWS\system32>mount.exe 172.16.0.1:/git X:\ 
