@@ -1,0 +1,19 @@
+# VM3
+# config file /etc/sysconfig/network-scripts/ifcfg-enp0s8
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+IPADDR=172.16.0.3
+NETMASK=255.255.255.0
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=enp0s8
+UUID=9c6e5ebb-6a30-49a2-b126-8c28c75425ea
+DEVICE=enp0s8
+ONBOOT=yes

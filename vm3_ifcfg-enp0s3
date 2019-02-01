@@ -1,0 +1,17 @@
+# VM3
+# config file /etc/sysconfig/network-scripts/ifcfg-enp0s3
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=enp0s3
+UUID=4b4dc062-b2c8-448e-becc-1723f595af01
+DEVICE=enp0s3
+ONBOOT=no

@@ -1,0 +1,6 @@
+# VM1 
+# Config file /etc/exports
+# 172.16.0.254 - IP address Windows10 PC 
+# 1001 - user toor UID
+
+/git 172.16.0.254(rw,sync,all_squash,anonuid=1001)
