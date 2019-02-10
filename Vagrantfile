@@ -52,6 +52,7 @@ Vagrant.configure("2") do |config|
            echo '192.168.0.11 server2' >> /etc/hosts
            echo '192.168.0.12 server3' >> /etc/hosts
     fi
+    yum install java-1.8.0-openjdk
     yum install tomcat tomcat-webapps tomcat-admin-webapps -y
     sed -i s/8009/8008/ /etc/tomcat/server.xml
     echo "<!doctype html>
@@ -77,6 +78,7 @@ Vagrant.configure("2") do |config|
            echo '192.168.0.11 server2' >> /etc/hosts
            echo '192.168.0.12 server3' >> /etc/hosts
     fi
+    yum install java-1.8.0-openjdk -y
     yum install tomcat tomcat-webapps tomcat-admin-webapps -y
     echo "<!doctype html>
     <html>
